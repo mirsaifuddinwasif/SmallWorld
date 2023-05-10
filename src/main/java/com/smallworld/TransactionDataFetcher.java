@@ -7,11 +7,19 @@ import java.util.Set;
 
 public class TransactionDataFetcher {
 
+    private List<Transaction> transactions;
+
+    public TransactionDataFetcher(List<Transaction> transactions) {
+        this.transactions = transactions;
+    }
+
     /**
      * Returns the sum of the amounts of all transactions
      */
     public double getTotalTransactionAmount() {
-        throw new UnsupportedOperationException();
+        return transactions.stream()
+                .mapToDouble(Transaction::getAmount)
+                .sum();
     }
 
     /**
