@@ -23,4 +23,5 @@ public class Transaction {
     private boolean issueSolved;
     @JsonProperty("issueMessage")
     private String issueMessage;
+
 }
