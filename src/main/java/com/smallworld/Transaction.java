@@ -24,4 +24,18 @@ public class Transaction {
     @JsonProperty("issueMessage")
     private String issueMessage;
 
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "mtn='" + mtn + '\'' +
+                ", amount=" + amount +
+                ", senderFullName='" + senderFullName + '\'' +
+                ", senderAge=" + senderAge +
+                ", beneficiaryFullName='" + beneficiaryFullName + '\'' +
+                ", beneficiaryAge=" + beneficiaryAge +
+                ", issueId=" + issueId +
+                ", issueSolved=" + issueSolved +
+                ", issueMessage='" + issueMessage + '\'' +
+                '}';
+    }
 }
