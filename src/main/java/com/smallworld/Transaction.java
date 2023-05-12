@@ -24,6 +24,19 @@ public class Transaction {
     @JsonProperty("issueMessage")
     private String issueMessage;
 
+    public Transaction(int mtn, double amount, String senderFullName, int senderAge, String beneficiaryFullName,
+                       int beneficiaryAge, Integer issueId, boolean issueSolved, String issueMessage) {
+        this.mtn = String.valueOf(mtn);
+        this.amount = amount;
+        this.senderFullName = senderFullName;
+        this.senderAge = senderAge;
+        this.beneficiaryFullName = beneficiaryFullName;
+        this.beneficiaryAge = beneficiaryAge;
+        this.issueId = issueId;
+        this.issueSolved = issueSolved;
+        this.issueMessage = issueMessage;
+    }
+
     @Override
     public String toString() {
         return "Transaction{" +
